@@ -6,39 +6,77 @@
     <title>Gym Hub</title>
 </head>
 <body>
+
     <header>
-        <h1>Gym Hub</h1>
+        <figure>
+            <img src="https://tse1.mm.bing.net/th/id/OIP.vtMw7rTMMvU3rB5YWnF30QHaHa?r=0&pid=ImgDet&w=208&h=208&c=7&dpr=1.5&o=7&rm=3" alt="Gym Hub Logo" width="80">
+        </figure>
+        <h1><b>Gym Hub</b></h1>
         <nav aria-label="Main navigation">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#gyms">Gyms</a>
-            <a href="#contacts">Contacts</a>
+            <a href="#home"><b>Home</b></a> |
+            <a href="#about"><b>About</b></a> |
+            <a href="#gyms"><b>Gyms</b></a> |
+            <a href="#contacts"><b>Contacts</b></a>
         </nav>
+        <hr>
     </header>
 
     <main>
+
+        <!-- 1. Home -->
         <section id="home">
-            <h2>Welcome to Gym Hub</h2>
+            <h2><b>Welcome to Gym Hub</b></h2>
             <p>
                 Discover gyms around you, compare facilities, explore services,
                 and choose the right place for your fitness journey.
             </p>
+            <form action="#gyms" method="get">
+                <label for="search"><b>Search for a gym:</b></label><br><br>
+                <input type="text" id="search" name="search" placeholder="e.g. Downtown Gym" size="30">
+                <button type="submit"><b>Go</b></button>
+            </form>
         </section>
 
-        <section id="gyms">
-            <h2>Find Gyms</h2>
-            <p>Find a gym that matches your fitness goals.</p>
-        </section>
+        <hr>
 
+        <!-- 2. About -->
         <section id="about">
-            <h2>About Us</h2>
-            <p>Learn more about Gym Hub and our mission.</p>
+            <h2><b>About Us</b></h2>
+            <p>Learn more about <b>Gym Hub</b> and our mission to connect fitness lovers with the best gyms near them.</p>
         </section>
 
-        <section id="contacts">
-            <h2>Contact Us</h2>
-            <p>Get in touch with our team.</p>
+        <hr>
+
+        <!-- 3. Gyms -->
+        <section id="gyms">
+            <h2><b>Find Gyms</b></h2>
+            <p>Find a gym that matches your <b>fitness goals</b>.</p>
+            <ul>
+                <li><b>PowerFit Gym</b> — Downtown, full equipment</li>
+                <li><b>Iron Zone</b> — Westside, 24/7 access</li>
+                <li><b>FitLife Center</b> — Eastside, classes &amp; pool</li>
+            </ul>
         </section>
+
+        <hr>
+
+        <!-- 4. Contacts -->
+        <section id="contacts">
+            <h2><b>Contact Us</b></h2>
+            <p>Get in touch with our team.</p>
+            <address>
+                <b>Email:</b> <a href="mailto:info@gymhub.com">info@gymhub.com</a><br>
+                <b>Phone:</b> +1 (800) 123-4567
+            </address>
+        </section>
+
     </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2024 <b>Gym Hub</b>. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
