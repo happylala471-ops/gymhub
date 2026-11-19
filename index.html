@@ -1,229 +1,56 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gym Hub</title>
+    <title>Gym Hub - Home</title>
 </head>
 
 <body>
 
+    <!-- Header and Navigation -->
     <header>
         <h1>Gym Hub</h1>
 
         <nav>
-            <a href="#" onclick="showPage('home')">Home</a> |
-            <a href="#" onclick="showPage('about')">About</a> |
-            <a href="#" onclick="showPage('gyms')">Gyms</a> |
-            <a href="#" onclick="showPage('contacts')">Contacts</a>
+            <a href="index.html">Home</a> |
+            <a href="about.html">About</a> |
+            <a href="gyms.html">Gyms</a> |
+            <a href="contact.html">Contacts</a>
         </nav>
     </header>
 
     <hr>
 
+    <!-- Home Content -->
     <main>
 
-        <!-- Home Page -->
-        <section id="home">
+        <center>
+            <img src="data:image/webp;base64,UklGRqIYAABXRUJQVlA4IJYYAAAQlwCdASqiAQoBPp1Kn0wlpCawI1Ia6gATiWNuiLEjz4BEttRruBDALzI6Txbu6kyfl4Br6g9xpzqNjVRybopn7fc/N8Bf8u9cCPK9rmQH0RhZSwMKUxdJXqaFcCLH0RlFgJAcmUpN8h9AlIikPat1qJ9Yt5QlUu1KaBUKpGBiR2sC5rkqEPsqrpgtrYX8t673iZr0QuA3jHCb+ZX0/sP92Fru7tDTi1L0Ase/wFXS5vRm+OGlhTPCbKLB89m9zSGBhMHVSxCZEH0ikBZMiT1LgXrbsL2w2JijNhbY6EqUBlukAutoe28g3ol3NaXXMOPvRxMg6e4CQQF0NCmhCT+lgfegtJvf4AjjvesG3OlRFCQsgVhEM7svcQBBuca4mADJ2jiMOyNoxC5VL2mQQ/Aur2h4xZZdTTnzlQzuc8vCyuR+jpd2Pt6e8W3c09dHUwTleBMWvHo5uWeBlqtlvYFafhZ+m08aKlMhnZtu/2qCf5cWC6KVypi/9O9bRnM2x9Xn9JjOz55sdp1ndoFlRRcTAKjYmikIr6bl9RM6755VZCNNDR00ravIIb38t+cef5mb9B/YlCEQnBBNbADeX9QJsJDcb4CtLwLuQq/M8fLgPJKoAeuV2lNQACZPRwn86XcMTXaV0nWSOp4i3O5q7iG0T/7tyeUU8wfoJXaxUJF+F4Tug3x9o9vqXiRDLkqtKaAGCrww3JuaGCDUyyU3twnk7ixzrNnz26aFYs9dNAY6KBfffY1jCfZRexa/xoo24U9YRkZbjAmRaBEuHdi0oq3l++fQOu8ZHUPnlrr6huw5poK01KMGMLXd2gn3zHwF4/2YSCVboS2iYXca0GSVeiA5Ge9PAC1oG7G19kKaIxzJSd0MjYRHRLw7pLHj+2PtfE69CzO/zLg+4kqLf3dgyXXMqHYUo06fhyjMmmsDcG02AMGH0JRnSlnBs+s8VkxZ1cHs8BQmQ1b0RtiF3Ln2sh+bAm5QT/f7PknIP+M/pW2ZM5YWU55uE49Hx5sUPgqJhNCZsYrUdMLHGhxAZe+pBroxvp6EzFb/VmNsC+Ik/81LwGkkrjxlltQELMTX8zMtA3PSOqoEnsavHEHowYqITtFz2Jamvd2zxZr7Gv2hsGq1A3TM2pRM1ALufv5J8gLiZgYHX/U+/vD8kSd0jM12PbmZtkk26BEStahxECKxpGbAFZVc8iAVQbcD+Qt/FYHKWkg6/BiFwgA3rf574LF+WiQCeYd5/i8LpgCGEC6IP604tx9vnxREcX8wpSA6gI4R2D/O0YxtcU5z68J3T9vWTUkuqucQY3c/f0l8n3bIhuyjG8bg+Nxk4PoEuQyCc9Flrh8YiUwdImugk1HILiKpKmrUetlOx0kOxM7iXNWbDF5a6ZzO6/AQcR3QHdYv6QcIX4it7f5qxaxpO6UavZTvt7oc24KTwCs+Jo0W6KiDxPO/2fa0KknocuuZwDw7X1aGpwhmZDXufYu3K+VezjW7lIqg4dFURe47Q9WbQADu6ERPA2yOgDPohecZ5t5U1TsWtMTPtZfGHjUVUaqvmBJi/S0TSU7BhiNeIGumAWkWvsdmponYMASRakwcnEVlyXaav4tj1rkYBcMQFsfNpVbh3mOFaAD+9Ph0FAP/BcVfAf/4IL7Uf5Lqp47uetqpk3qiGOYA8YlOPL/TtZSRzm5d7LyXyX6lCWIsYNkVGaimIIEjB7ylx89F55+NGg1jKYLskUzWZ0CdmpFDgWRhNPc3WudeOasMbG6Sr06ExB/XI75eo34BZt3sq63FUphtZ3QJOwi6auurQBhg2Gz8RO4loKjixw82sgG7PUgQUG+rXSAaD1h0/sp6oMFFRHx3yojTz90M+IL3SLC52GjqRoTukmLjIuZpuY8ri4HkMhTLY1/DDWOt6PYNibS0EtQP3aGAkg5dFV/BDI3kKsiuvM2TpsIJsQA7KKESauQ4Kxjq9BgOsiLrnJ8uwL0Ib0RPdXQISTe8pRbu10yEm7jduPv9d32ph2ZTmzkgypdsURgUvPcmkgqa5hoiEAn9REZSP3OshYFwzdB3AJv6GMCk4M/1syYrBlcLpm8UpmjU/jKyokLSCBcdLgUwZq3zGCU7GeSbCLM3zP+ippeKwbv/2vvhdUMxMAwuRNqzpKZMyNRVC/Vi1BgA2jWKG97LwiMxXXW0vwXdMWrJV8hWSZjWbTKXf3ELFQL51WpsgqsuP5x8Wd2id09XibOGe8KFGe0Rkobwwc8aEhYqOtTpa3ZU112/8Jzy+x8ur6a8VsFbK09hXnuBezWq+zp1qEIVkTGyMtTgCfjbX6RQiM/MIJM7He0FM609raeGVZOg82J2sfDDcoy+s+9HyFwhPjqi+K8J7fILRFWLt0r8Jy/VdEbXXEuTLiMGHRRS6G+od4c/Nll/WXprup+kr81Bp2SLV2zQWTfaXhFsaDNDeqGUgQJrGfVU7Y1JEBgB93U+Wg4yBKs8UlSjUzrt+vlJWz2yLxleJnlbAkFIW5qDNn62DqY2P3TKtofdl0Bviu/7ogwzeekxkh4dAgZBWb8F6F6XHMpa8/iR0cXOAxJQvU61QIHa4RQnq3LQ8B2AmqFuxAWcTAQ8eU/BEEtMwk6HHM4Iy1gX+Q8g04Zst3fK2tgSQUjUgmNZ4G5oMOfyKFHrFXiijgyS1LofZ7mmwRIQDXX8EHS7wp757Zexvv7LRVZpwfJxhhv8kTmkLpnxyX19P4C/BPzaJp7xAvYQxLOFCamEYDm5gcXei+9egDNNqHXSWpuDhfhhxDrVTKooCmoLvfIyK451CBrEWyK7MofpZIbmBhxYig7ZEExhgqA9HTP65WXkpO9Td8vWM6envwfU2HMT8jfuulVkicYEXVYxEsDE873xp5x857P/vHfNxHL/fjIL3O/GQXmDZ/PXxerGS9SZqkIjDjXE1v89/u/I+IG8Kcmw5HR3vPWYtuUWdE8sqe27o23vDUdkNl5LNY+3AaWU2i1wqFxqKvqV+5k1ITQ2tGruLQRUGHnGGBTwZ66f8oMLBcqCuOM/ZNOOe5OWao1p4hgvfJc4qCo4F3S+BtWdmzwRuVK+1L92yKX9iE4PEtQO/9i3sHnYOdRqt7QTXO57EMt1DfdluQF1EijxlPsfCnff8jSCTx7Nuzi7AtRlW037lhck8CAEPNlIis5Q3h15i7hbaZsowAds0PhShtUfhcPuk8v61f9kq6oMgQ0LHSmfSFZBSpxY2ZAx0LbR46Wx8rRvQocsaEeVkjOYV3Fm2ZqCyZSl8bs9TOJs/SWWoo9rNAvIXxxIjzpgan4pA+3bgQ6bzLPNpq+gJRo2pQgPkojHD5kV+j+HX68/hYut/KN76RXbU2+MQFBiE1XDrw6aa+NEXQQ2l9M4aghGfhQCoWNznsHrMRUe6hZHJVLCqbxflLMSRKr+FiqxH/EpLWhPpU/L7zg9XlqtGIPdDmYKjTgAK0rEVUK3CqAwsB+7S3s9jSacIbIVCVPdGpgZh6cp1YqeIpUKQs5zONhq8sq9OfeRoJJ9gYrRPX7/BMKr+hcxw9njACCQw04qCOxynoJAQRuPi+Zym39vLkiqzes440RBy/rnTG2UEpKbNOop8bVZ1wsPCr80U6lN6utkaAtbFGEZQ4pfi2EjWNsyJ8Wvzsuwy2JRV4wLEdwdMFfHxxBMP53wwaVmPNi9AkF/Jwe1IZR3aY3xZS5011ejRu3yIonbcIRvSvHRGbx5QEF4S5ayFmj3NCj9pz3jKQq6Ma2dLqIt4NsiOriwCHVKdWfR5pzQU0zDqFPWcHeBlKLPUvl8/+j0MO8TWWCuIJAFk/TDqcMIy9qDrZnMtZYXjTqUSXY6A+WfGGW1twD/1SKH47nxGgO+f3Xtv8eGsBoVi5g/yJ+wktVea3qFaJlO2RtXWz1VJzozwhRTHTynWyhEMM3V23rRWyfc7YgVSfQgLk7TitiuIDLzAVW7t1T858qqboJFiJvDO720+6hQT9V1DDR7aOxGcbL//vWxNeG08Zt9BHOuNqks+ZwADqgAzF8dgXPZf+KnVJ79PyduDJX1iAamecSj9iJ/DYLd/0FB4/T+INYufQj6RcPGaIIdJm7NOrdraS/sjhkphkmEgSWxaa+uadiSMbfO8PJW4uHw3S4aV27czkliGP6GJy2i3qMMrVcY35gJscE6EI7G4gvOY21xg1/YbsF16AsWTk0OsrBV8VFoUuERJLokuue/P+2JS7uQmepOUCSjUfRa24Qo7xHjN2tyt7+ksLTDNEFBKNEy5KvDBhlTI5gbK8zg75h/z1UBfm5GN6k3GXVISlysGrrj9FMQkVrWvZkVQy1CVuiG1vo9URIkbju6Q20AWm3SQ83y8JAMQKuu20q6n2Bu5s3ho8D0Kn84JAUI++97OK1hUQSdpTuymgW0gTVSLSvqgCN9Qq0HC9a9HP3BVL0J9frYpER3G3PeaUThaIpVk6V8FoALT7OE18EDHSETHGsdE2jYtagAMzyPc5LpGkjvpuu1gTxEdRDB+0IeTixl2jzK3Q7FslCd/yiOZZ8Z7NF1V3vL+uN5VePfX4gJ/3xNbJt074+3zMb2PbV1RqqgM+20orE8Pr++hQtc31p65xIQEud6H4aAfR/BWpkps70Mn6Yr5wTnetqW2hDNCAtjvCMfqo4hxOgj9nIk5FlmMp5Jb1Ey0F0uxZ/xw/IQjTvM27lr8ojdqhrG/MlUV4/xP4/RZCA9XuwoyWUby04WFgqk30foZcm1BdXkTx6Wz3e2jhpVKvF/19j61Y4aUqsW70/Ng0AV3HIVXxpHpPUZdlJveWUt903nfeSBoqlnOCXSQVb1aYU7mJuHEGD0mN9IsFhj6fni3RLbvLtBssSZfyzPtR7ukBkUaZ15m5to3uoMhGQO/WZj1a28AqM0jCQDB3Y+wiqbWy8pY/vQzsdOvxfFTSkRbeDPd6/MEuPuOLUsI60TlJFRVDswOuZNGEsyzzzp9SWX2sD1rDDDZ4fVb+Rzk3MZiTDAkMAHfZFNy9Divda0oxOw9dRjaof9ZtRcusTMbgnC5A+A+kQLnRoq1ZJOvZ3FI9hiBmauRlMCPXQ7bomq7/XNUmNf4p/KFp6tFXTEm//MHDvJGW+30qnFt7JOwC/zjc6DkgEE2ORBHK+oyo7nWtQ27x99xkRJUu1VkmtnT61HJySW8emJUHfcqYkyFKayCvyvHNDC2MKoa++qWAPMv9EC/CL05Mx1x+M+NwgRMLvlQ87lSD2n3Dsv44HCVHSBed4FasSOiVCIA8ag2XWwHN+gbbR/lNAJYHpuQJiQWrybvlT+BeMN1BOSEPBfru14tBq42LHGuHtGkbrzacMiwQj8Qg+/kjx0IFzYiy2sfJpePiqRtx6MCnqF5EymUhU9rBUU4DIh9FducvkdLvmBMhg5nnHhvINv9otSr3cKHLdndDomImHBWn9H5e8FLsvg8+pB8RTbfhBtIU3Wyjcjn4tgL0qkUNcz27foELg3bPBWFkWS9xYzd+D2nfRPwTLNiL7HlhBrTLXixbVrRmiGbxmN5OaV7mStoYBbqwkVtCy2p01us2QrZG+/oSaBYTHH0v29jJg1pX2lSFODtQUD2bmD1B8IRaaHZLlJOUACSFrnYvyOHyBXvDMO47qYEVwyeiT4Z2yZzXx1AcfLAEbm+7U195Z60WN6NZZOn2OswIZoNx9w6TYjh0IMOJiBcue1yl5TUlL7VRJYpV4E/3XtnzcXQsyyPTUAk6UO3lpq9RBwkxAQJQz7wdygh9v1iUsqjWBeT3vzroEjUJ4Lg7/gHb+YAa17ubjjELhrwNfS3fbDJUiDh3bD0PbC9TaS0at04TGXwfNQ6fbGEuYHLmbhiDUbSOkQpHrrGBvjqzJBoVUPbrjT+Sxo1eFjCQubDi834auNZK+FieXq5Vmh2TtnGGVva73/X4h6W/aCz3q70MG3JPWQYIYQPyPUYlBvkLwgUhKAIkbclAXpoa0pZIJvCq1xwMcNji27EYymkPVSBdNyTJb9Exm8plSsBC5OGy77HKNz+bvRe87qj3eYCQoKSqCChjNgopPOYcGoOvdk0l1gUvcJXa/dIKUW68mxmb/vCsBlI9+8sIDCd5ojBVgHn8RDsSuHuJ6KkEGA2hkStwyTDBWBkWK4k35Q3tzYLfQsjSGpLLrzkB9D51iunNsAnT4LDmySDjtCpgFgWmvsg6+JYixylVHIpkmy4gsM/zE+PcGFOxltDHEN0UWTFUukNConizk9MDL8b36cr0wKXQRK8ULvEmQK0HlWPVdMkrx466BpIaRHFysFCe5AUgIpSGm0AP1+gSLrUCNU/Y3/6owY/ZusSixrT1VVh4mrFEDTbjPmWja9ogbM4O43tPxapkA2fDu0swITXKYUkpfElL/jHHfMSySNnDhZWLacVWFip98vhMdXe/yReNEYE9UvPY1SDiJQ4yUhxHmJ1zYPhZ0fpCzBTn58tvwIxuKoDd2UXpoAjWtfxBddAteAf9JJy78aL/RSoOIAocgb1/1PXKYb7oovDyXUXKh95qes3tZF41M4OCUOxQorF/SZF7b6geaT2jQEZXiPwE1KTjZxy3I9OQ+UMwf7jSnu4ksQs0m3v+mIAU77NiH7cORNN2bT0/blLmScFr/mPtSKEWFfBcQO4nZMfYa7bDuURpfvYjPBfZwlxPDdXh/XXaIqMYWrMsHa0rRraLjZKwNn4p6O1PmJorYDj5MYotHzMhDBSM8lv21NCpc/Uizv8vNqHKG8BIdrt5Z4NKLX3hsvqeSMFyHBSRH2hkrLsIUSxYhjBkG8/GDWVhQxwV32gpLm81jbaFMXzqAA+qiYX3sl1Bd7+ZUutEFpSLbxjyUB4KIeJ+bNCLD1M8G1ifv5nDY8fOoqHPgT/W4NWfgUkSZbkUIN5gqBq6z1pYa1aOw55GDo+fzWRgmohLikLg106saoJxN/nIUQItnydSD90dPBRJ2dlEpARUWAh3vgaDggQHBOGeDkndwgxLn1XdQjHPeDwSX3A12eBrUfhZuQgb4nxGbXATQJIRUE/kW9UljovbDKxhUFhaAg4EuOnGmcEAMTSnyLd4sVRTgrN9D6YYWFb7n/LtqvMLXrW53ZXVLWzwRQ5vTEFJdXIXkl3bQd2WLRktQALpftTbHP9aQI7kKzAxLqe9zFwkcjDJXTnLfG8WBfx+ia7AchZ2oUX6AVxmGqIKuu7ezV/xZcz2URZLsqZLJFbMPvLPbHGe0v8hlulcD4gPcuClyMSM9fcLYIiA83C8f2SUGYMTQnv0n4S4pC/pAyKIamjJddfrFg5DqWGsQwgDz4TytnCZHUL081IeepicUIoOtGa27WqDGdUHXT42XMnId2myh1nprfGM5vAEkqkNHj1LtaSuxvSc9rtf0fYLeTAn5/9HnRRm7Ntff+FWZY3fC5AdWPgWqBRkYusoNOxqKYB2X7kkgyJ4Kf0OLJi1qojyx646aaS1eOynALjtRCzOQTdjedX9nvVqHMaZc6dO/JVqY2PAXR+WZeNjeGwbj54FT8uK6ochTRokJMx1+BSJQdl2r4RdB9kk64Oe4EWocqWuZXL5+8PTNXs5TUVbBjN2sH0VQ8Wxdp9Kyfo7dJp3AXOpVp9yPqb9VmRWlLxbPd1TR5766FRxlktpycUs4Ye8LEz6lgSd5VBG/Oyheo3yHsc9pTT5mfZ5t6+P3TEOctIVBgqX5H0JIBsT7FABiDQabXVUxwxp6RViov8zcs6ckvPn1YMk0bxYL4+FAeiWayIWKQzPZLlDcJ0pb8s2TVaUh0U/gB1uWxrpf6OsmqvoZOxgxQ559F2rSVIrKCyaaxzV0RIq7hUt8T8/2xQvJyF+r83squz9klw3EwymDLpbLLP+wSftM+B2GqRumB4Q5jayNSjOZ8JhBnNWo8DhT/2gdiCtZqp3gQr2PCxfLlj/bUrHNocH5gi8WpH2NM/o2OlHj3dEeMzaXw7lo+ffM0yV9llKnvzLXq27Dmqu51GASE4i6dBO//Jm73VhTTs0PyCLV2AZxIWX/SdXfaAiy27H2odj0UpgYOSCFnu+CAUBS2GvaYBsAo1OqP0qeCOGkBzuhkbC/NrllQcLL8Z/bnPrSaOGJmu9FNMHkG9JP1PR9vzyAiL4hfmm9N4yYLsTRnwG/YoewkyI0BKOTAuPA5O72YmCESaTrPx8TJa/FOF0g8g+V+E6FwVC7/efK0twVCDtkkwPxzUZqKHXhxIjvUhBeatFA8qLQilHhuMayNN5tYSmwhkXAfsbpFQ0apVPh/UcWtYzZYGi6DmMpmdVzw8jfrsbMJqOc5Hn4lA1Pvnx/gJ7W7v8jU/lhGsseUC1Puy9/T7XO/5BOQyHgcvKl8Tgt2Pjkm5h5CDx4i8kmu3Tb3tq9UjQIVoOFfWc0CpYu7WyimRGoWpUbgAAA="
+                 alt="Fitness athlete"
+                 width="100%"
+                 height="500">
+        </center>
 
-            <h2>Welcome to Gym Hub</h2>
+        <h2>Welcome to Gym Hub</h2>
 
-            <p>
-                Discover gyms around you, compare facilities,
-                explore services, and choose the right place
-                for your fitness journey.
-            </p>
+        <p>
+            Discover gyms around you, compare facilities,
+            explore services, and choose the right place
+            for your fitness journey.
+        </p>
 
-            <button onclick="showPage('gyms')">
-                Explore Gyms
-            </button>
-
-        </section>
-
-
-        <!-- About Page -->
-        <section id="about" hidden>
-
-            <h2>About Us</h2>
-
-            <p>
-                Gym Hub connects fitness lovers with gyms.
-                Our mission is to make finding and managing
-                gym services easier.
-            </p>
-
-        </section>
-
-
-        <!-- Gyms Page -->
-        <section id="gyms" hidden>
-
-            <h2>Our Gyms</h2>
-
-            <p>Search for a gym or add a new gym.</p>
-
-            <form onsubmit="addGym(event)">
-
-                <label for="gymName">Gym Name:</label>
-                <input type="text" id="gymName" required>
-
-                <label for="location">Location:</label>
-                <input type="text" id="location" required>
-
-                <button type="submit">Add Gym</button>
-
-            </form>
-
-            <h3>Registered Gyms</h3>
-
-            <table border="1">
-
-                <thead>
-                    <tr>
-                        <th>Gym Name</th>
-                        <th>Description</th>
-                        <th>Day</th>
-                        <th>Schedule</th>
-                    </tr>
-                </thead>
-
-                <tbody id="gymTable">
-
-                    <tr>
-                        <td>PowerFit Gym</td>
-                        <td>Full exercise equipment</td>
-                        <td>Monday - Friday</td>
-                        <td>6 AM - 10 PM</td>
-                    </tr>
-
-                    <tr>
-                        <td>Iron Zone</td>
-                        <td>Modern gym</td>
-                        <td>Monday - Sunday</td>
-                        <td>Open 24 Hours</td>
-                    </tr>
-
-                    <tr>
-                        <td>FitLife Center</td>
-                        <td>Fitness classes and pool</td>
-                        <td>Monday - Saturday</td>
-                        <td>7 AM - 9 PM</td>
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </section>
-
-
-        <!-- Contacts Page -->
-        <section id="contacts" hidden>
-
-            <h2>Contact Us</h2>
-
-            <p>Get in touch with our team.</p>
-
-            <address>
-                Email:
-                <a href="mailto:info@gymhub.com">
-                    info@gymhub.com
-                </a>
-
-                <br>
-
-                Phone: +1 (800) 123-4567
-            </address>
-
-            <h3>Send Us a Message</h3>
-
-            <form onsubmit="sendMessage(event)">
-
-                <label for="name">Your Name:</label><br>
-                <input type="text" id="name" required>
-
-                <br><br>
-
-                <label for="email">Your Email:</label><br>
-                <input type="email" id="email" required>
-
-                <br><br>
-
-                <label for="message">Your Message:</label><br>
-                <textarea id="message" rows="4" required></textarea>
-
-                <br><br>
-
-                <button type="submit">Send Message</button>
-
-            </form>
-
-        </section>
+        <a href="gyms.html">Explore Gyms</a>
 
     </main>
 
     <hr>
 
+    <!-- Footer -->
     <footer>
         <p>Copyright 2026 Gym Hub. All rights reserved.</p>
     </footer>
-
-
-    <script>
-
-        // Show only the selected page
-
-        function showPage(pageName) {
-
-            document.getElementById("home").hidden = true;
-            document.getElementById("about").hidden = true;
-            document.getElementById("gyms").hidden = true;
-            document.getElementById("contacts").hidden = true;
-
-            document.getElementById(pageName).hidden = false;
-
-        }
-
-
-        // Add a new gym to the table
-
-        function addGym(event) {
-
-            event.preventDefault();
-
-            var name = document.getElementById("gymName").value;
-            var location = document.getElementById("location").value;
-
-            var table = document.getElementById("gymTable");
-
-            var row = table.insertRow();
-
-            row.insertCell(0).textContent = name;
-            row.insertCell(1).textContent = "New registered gym";
-            row.insertCell(2).textContent = "Not specified";
-            row.insertCell(3).textContent = location;
-
-            alert("Gym added successfully!");
-
-            document.getElementById("gymName").value = "";
-            document.getElementById("location").value = "";
-
-        }
-
-
-        // Contact form message
-
-        function sendMessage(event) {
-
-            event.preventDefault();
-
-            alert("Thank you! Your message has been received.");
-
-        }
-
-    </script>
 
 </body>
 </html>

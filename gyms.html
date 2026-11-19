@@ -1,38 +1,100 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gym Hub - Registered Gyms</title>
+    <title>Gym Hub - Gyms</title>
 </head>
+
 <body>
 
+    <!-- Header and Navigation -->
     <header>
-        <figure>
-            <img src="https://tse1.mm.bing.net/th/id/OIP.vtMw7rTMMvU3rB5YWnF30QHaHa?r=0&pid=ImgDet&w=208&h=208&c=7&dpr=1.5&o=7&rm=3" alt="Gym Hub Logo" width="80">
-        </figure>
-        <h1><b>Gym Hub</b></h1>
+        <h1>Gym Hub</h1>
+
         <nav>
-            <a href="index.html"><b>Home</b></a> |
-            <a href="gyms.html"><b>Registered Gyms</b></a> |
-            <a href="members.html"><b>Members</b></a> |
-            <a href="plans.html"><b>Membership Plans</b></a> |
-            <a href="trainers.html"><b>Trainers</b></a> |
-            <a href="payments.html"><b>Payments</b></a> |
-            <a href="attendance.html"><b>Attendance</b></a> |
-            <a href="schedule.html"><b>Gym Schedule</b></a>
+            <a href="index.html">Home</a> |
+            <a href="about.html">About</a> |
+            <a href="gyms.html">Gyms</a> |
+            <a href="contact.html">Contacts</a>
         </nav>
-        <hr>
     </header>
 
+    <hr>
+
+    <!-- Gyms Content -->
     <main>
-        <h2><b>Registered Gyms</b></h2>
+
+        <h2>Our Gyms</h2>
+
+        <p>Explore different gyms and their facilities.</p>
+
+        <h3>Register a Gym</h3>
+
+        <form>
+
+            <label for="gymName">Gym Name:</label>
+            <input type="text" id="gymName" required>
+
+            <br><br>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" required>
+
+            <br><br>
+
+            <button type="submit">Add Gym</button>
+
+        </form>
+
+        <h3>Registered Gyms</h3>
+
+        <table border="1">
+
+            <thead>
+                <tr>
+                    <th>Gym Name</th>
+                    <th>Description</th>
+                    <th>Day</th>
+                    <th>Schedule</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>PowerFit Gym</td>
+                    <td>Full exercise equipment</td>
+                    <td>Monday - Friday</td>
+                    <td>6 AM - 10 PM</td>
+                </tr>
+
+                <tr>
+                    <td>Iron Zone</td>
+                    <td>Modern gym</td>
+                    <td>Monday - Sunday</td>
+                    <td>Open 24 Hours</td>
+                </tr>
+
+                <tr>
+                    <td>FitLife Center</td>
+                    <td>Fitness classes and pool</td>
+                    <td>Monday - Saturday</td>
+                    <td>7 AM - 9 PM</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
     </main>
 
     <hr>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 <b>Gym Hub</b>. All rights reserved.</p>
+        <p>Copyright 2026 Gym Hub. All rights reserved.</p>
     </footer>
 
 </body>
