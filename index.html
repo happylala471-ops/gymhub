@@ -1,73 +1,165 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gym Hub</title>
 </head>
+
 <body>
 
     <header>
-        <figure>
-            <img src="https://tse1.mm.bing.net/th/id/OIP.vtMw7rTMMvU3rB5YWnF30QHaHa?r=0&pid=ImgDet&w=208&h=208&c=7&dpr=1.5&o=7&rm=3" alt="Gym Hub Logo" width="80">
-        </figure>
-        <h1><b>Gym Hub</b></h1>
-        <nav aria-label="Main navigation">
-            <a href="#home"><b>Home</b></a> |
-            <a href="#about"><b>About</b></a> |
-            <a href="#gyms"><b>Gyms</b></a> |
-            <a href="#contacts"><b>Contacts</b></a>
+        <h1>Gym Hub</h1>
+
+        <nav>
+            <a href="#" onclick="showPage('home')">Home</a> |
+            <a href="#" onclick="showPage('about')">About</a> |
+            <a href="#" onclick="showPage('gyms')">Gyms</a> |
+            <a href="#" onclick="showPage('contacts')">Contacts</a>
         </nav>
-        <hr>
     </header>
+
+    <hr>
 
     <main>
 
-        <!-- 1. Home -->
+        <!-- Home Page -->
         <section id="home">
-            <h2><b>Welcome to Gym Hub</b></h2>
+
+            <h2>Welcome to Gym Hub</h2>
+
             <p>
-                Discover gyms around you, compare facilities, explore services,
-                and choose the right place for your fitness journey.
+                Discover gyms around you, compare facilities,
+                explore services, and choose the right place
+                for your fitness journey.
             </p>
-            <form action="#gyms" method="get">
-                <label for="search"><b>Search for a gym:</b></label><br><br>
-                <input type="text" id="search" name="search" placeholder="e.g. Downtown Gym" size="30">
-                <button type="submit"><b>Go</b></button>
+
+            <button onclick="showPage('gyms')">
+                Explore Gyms
+            </button>
+
+        </section>
+
+
+        <!-- About Page -->
+        <section id="about" hidden>
+
+            <h2>About Us</h2>
+
+            <p>
+                Gym Hub connects fitness lovers with gyms.
+                Our mission is to make finding and managing
+                gym services easier.
+            </p>
+
+        </section>
+
+
+        <!-- Gyms Page -->
+        <section id="gyms" hidden>
+
+            <h2>Our Gyms</h2>
+
+            <p>Search for a gym or add a new gym.</p>
+
+            <form onsubmit="addGym(event)">
+
+                <label for="gymName">Gym Name:</label>
+                <input type="text" id="gymName" required>
+
+                <label for="location">Location:</label>
+                <input type="text" id="location" required>
+
+                <button type="submit">Add Gym</button>
+
             </form>
+
+            <h3>Registered Gyms</h3>
+
+            <table border="1">
+
+                <thead>
+                    <tr>
+                        <th>Gym Name</th>
+                        <th>Description</th>
+                        <th>Day</th>
+                        <th>Schedule</th>
+                    </tr>
+                </thead>
+
+                <tbody id="gymTable">
+
+                    <tr>
+                        <td>PowerFit Gym</td>
+                        <td>Full exercise equipment</td>
+                        <td>Monday - Friday</td>
+                        <td>6 AM - 10 PM</td>
+                    </tr>
+
+                    <tr>
+                        <td>Iron Zone</td>
+                        <td>Modern gym</td>
+                        <td>Monday - Sunday</td>
+                        <td>Open 24 Hours</td>
+                    </tr>
+
+                    <tr>
+                        <td>FitLife Center</td>
+                        <td>Fitness classes and pool</td>
+                        <td>Monday - Saturday</td>
+                        <td>7 AM - 9 PM</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
         </section>
 
-        <hr>
 
-        <!-- 2. About -->
-        <section id="about">
-            <h2><b>About Us</b></h2>
-            <p>Learn more about <b>Gym Hub</b> and our mission to connect fitness lovers with the best gyms near them.</p>
-        </section>
+        <!-- Contacts Page -->
+        <section id="contacts" hidden>
 
-        <hr>
+            <h2>Contact Us</h2>
 
-        <!-- 3. Gyms -->
-        <section id="gyms">
-            <h2><b>Find Gyms</b></h2>
-            <p>Find a gym that matches your <b>fitness goals</b>.</p>
-            <ul>
-                <li><b>PowerFit Gym</b> — Downtown, full equipment</li>
-                <li><b>Iron Zone</b> — Westside, 24/7 access</li>
-                <li><b>FitLife Center</b> — Eastside, classes &amp; pool</li>
-            </ul>
-        </section>
-
-        <hr>
-
-        <!-- 4. Contacts -->
-        <section id="contacts">
-            <h2><b>Contact Us</b></h2>
             <p>Get in touch with our team.</p>
+
             <address>
-                <b>Email:</b> <a href="mailto:info@gymhub.com">info@gymhub.com</a><br>
-                <b>Phone:</b> +1 (800) 123-4567
+                Email:
+                <a href="mailto:info@gymhub.com">
+                    info@gymhub.com
+                </a>
+
+                <br>
+
+                Phone: +1 (800) 123-4567
             </address>
+
+            <h3>Send Us a Message</h3>
+
+            <form onsubmit="sendMessage(event)">
+
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" required>
+
+                <br><br>
+
+                <label for="email">Your Email:</label><br>
+                <input type="email" id="email" required>
+
+                <br><br>
+
+                <label for="message">Your Message:</label><br>
+                <textarea id="message" rows="4" required></textarea>
+
+                <br><br>
+
+                <button type="submit">Send Message</button>
+
+            </form>
+
         </section>
 
     </main>
@@ -75,8 +167,63 @@
     <hr>
 
     <footer>
-        <p>&copy; 2024 <b>Gym Hub</b>. All rights reserved.</p>
+        <p>Copyright 2026 Gym Hub. All rights reserved.</p>
     </footer>
+
+
+    <script>
+
+        // Show only the selected page
+
+        function showPage(pageName) {
+
+            document.getElementById("home").hidden = true;
+            document.getElementById("about").hidden = true;
+            document.getElementById("gyms").hidden = true;
+            document.getElementById("contacts").hidden = true;
+
+            document.getElementById(pageName).hidden = false;
+
+        }
+
+
+        // Add a new gym to the table
+
+        function addGym(event) {
+
+            event.preventDefault();
+
+            var name = document.getElementById("gymName").value;
+            var location = document.getElementById("location").value;
+
+            var table = document.getElementById("gymTable");
+
+            var row = table.insertRow();
+
+            row.insertCell(0).textContent = name;
+            row.insertCell(1).textContent = "New registered gym";
+            row.insertCell(2).textContent = "Not specified";
+            row.insertCell(3).textContent = location;
+
+            alert("Gym added successfully!");
+
+            document.getElementById("gymName").value = "";
+            document.getElementById("location").value = "";
+
+        }
+
+
+        // Contact form message
+
+        function sendMessage(event) {
+
+            event.preventDefault();
+
+            alert("Thank you! Your message has been received.");
+
+        }
+
+    </script>
 
 </body>
 </html>

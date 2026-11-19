@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Hub - Gym Schedule</title>
+</head>
+<body>
+
+    <header>
+        <figure>
+            <img src="https://tse1.mm.bing.net/th/id/OIP.vtMw7rTMMvU3rB5YWnF30QHaHa?r=0&pid=ImgDet&w=208&h=208&c=7&dpr=1.5&o=7&rm=3" alt="Gym Hub Logo" width="80">
+        </figure>
+        <h1><b>&#127947; Gym Hub</b></h1>
+        <nav aria-label="Main navigation">
+            <a href="index.html"><b>&#127968; Home</b></a> |
+            <a href="gyms.html"><b>&#127963; Registered Gyms</b></a> |
+            <a href="members.html"><b>&#128101; Members</b></a> |
+            <a href="plans.html"><b>&#128179; Membership Plans</b></a> |
+            <a href="trainers.html"><b>&#127941; Trainers</b></a> |
+            <a href="payments.html"><b>&#128176; Payments</b></a> |
+            <a href="attendance.html"><b>&#128203; Attendance</b></a> |
+            <a href="schedule.html"><b>&#128197; Gym Schedule</b></a>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        <h2><b>&#128197; Gym Schedule</b></h2>
+
+        <form>
+            <label for="sgym"><b>View Schedule for:</b></label>
+            <select id="sgym" name="sgym">
+                <option value="all">-- All Gyms --</option>
+                <option value="powerfit">PowerFit Gym</option>
+                <option value="ironzone">Iron Zone</option>
+                <option value="fitlife">FitLife Center</option>
+                <option value="elitefit">EliteFit Sport Club</option>
+                <option value="zenith">Zenith Wellness</option>
+            </select>
+            <button type="submit"><b>&#128270; Go</b></button>
+        </form>
+
+        <br>
+        <a href="#addschedule"><b>+ Add New Schedule Entry</b></a>
+
+        <hr>
+
+        <!-- WEEKLY SCHEDULE TABLE -->
+        <section>
+            <h3><b>Weekly Class Schedule</b></h3>
+            <table border="1" cellpadding="8" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>&#128197; Monday</th>
+                        <th>&#128197; Tuesday</th>
+                        <th>&#128197; Wednesday</th>
+                        <th>&#128197; Thursday</th>
+                        <th>&#128197; Friday</th>
+                        <th>&#128197; Saturday</th>
+                        <th>&#128197; Sunday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="8" align="center"><i>No schedule entries to display.</i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- CLASS LIST TABLE -->
+        <section>
+            <h3><b>All Scheduled Classes</b></h3>
+            <table border="1" cellpadding="8" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Class ID</th>
+                        <th>Class Name</th>
+                        <th>Gym</th>
+                        <th>Trainer</th>
+                        <th>Days</th>
+                        <th>Time</th>
+                        <th>Duration</th>
+                        <th>Max Spots</th>
+                        <th>Plan Required</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="9" align="center"><i>No classes to display.</i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- ADD SCHEDULE FORM -->
+        <section id="addschedule">
+            <h3><b>Add New Schedule Entry</b></h3>
+            <form>
+                <fieldset>
+                    <legend><b>Schedule Form</b></legend>
+
+                    <label for="cname"><b>Class Name:</b></label><br>
+                    <input type="text" id="cname" name="cname" placeholder="e.g. HIIT Bootcamp" size="30" required><br><br>
+
+                    <label for="cgym"><b>Gym:</b></label><br>
+                    <select id="cgym" name="cgym">
+                        <option value="">-- Choose Gym --</option>
+                        <option value="powerfit">PowerFit Gym</option>
+                        <option value="ironzone">Iron Zone</option>
+                        <option value="fitlife">FitLife Center</option>
+                        <option value="elitefit">EliteFit Sport Club</option>
+                        <option value="zenith">Zenith Wellness</option>
+                    </select><br><br>
+
+                    <label for="ctrainer"><b>Trainer:</b></label><br>
+                    <select id="ctrainer" name="ctrainer">
+                        <option value="">-- Choose Trainer --</option>
+                        <option value="t001">Marcus Reynolds</option>
+                        <option value="t002">Sofia Reyes</option>
+                        <option value="t003">Derek Thompson</option>
+                        <option value="t004">Priya Nair</option>
+                        <option value="t005">Jake Morrison</option>
+                    </select><br><br>
+
+                    <label><b>Days:</b></label><br>
+                    <input type="checkbox" id="mon" name="days" value="Monday">
+                    <label for="mon">Monday</label>&nbsp;
+                    <input type="checkbox" id="tue" name="days" value="Tuesday">
+                    <label for="tue">Tuesday</label>&nbsp;
+                    <input type="checkbox" id="wed" name="days" value="Wednesday">
+                    <label for="wed">Wednesday</label>&nbsp;
+                    <input type="checkbox" id="thu" name="days" value="Thursday">
+                    <label for="thu">Thursday</label>&nbsp;
+                    <input type="checkbox" id="fri" name="days" value="Friday">
+                    <label for="fri">Friday</label>&nbsp;
+                    <input type="checkbox" id="sat" name="days" value="Saturday">
+                    <label for="sat">Saturday</label>&nbsp;
+                    <input type="checkbox" id="sun" name="days" value="Sunday">
+                    <label for="sun">Sunday</label><br><br>
+
+                    <label for="ctime"><b>Start Time:</b></label><br>
+                    <input type="time" id="ctime" name="ctime"><br><br>
+
+                    <label for="cduration"><b>Duration (minutes):</b></label><br>
+                    <input type="number" id="cduration" name="cduration" placeholder="e.g. 60" min="1" size="10"><br><br>
+
+                    <label for="cspots"><b>Max Spots:</b></label><br>
+                    <input type="number" id="cspots" name="cspots" placeholder="e.g. 15" min="1" size="10"><br><br>
+
+                    <label for="cplan"><b>Plan Required:</b></label><br>
+                    <select id="cplan" name="cplan">
+                        <option value="all">All Plans</option>
+                        <option value="standard">Standard &amp; above</option>
+                        <option value="premium">Premium only</option>
+                    </select><br><br>
+
+                    <button type="submit"><b>&#128197; Save Schedule</b></button>
+                    <button type="reset">Clear</button>
+                </fieldset>
+            </form>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2024 <b>Gym Hub</b>. All rights reserved.</p>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="gyms.html">Gyms</a> |
+            <a href="members.html">Members</a> |
+            <a href="plans.html">Plans</a> |
+            <a href="trainers.html">Trainers</a> |
+            <a href="payments.html">Payments</a> |
+            <a href="attendance.html">Attendance</a> |
+            <a href="schedule.html">Schedule</a>
+        </nav>
+    </footer>
+
+</body>
+</html>

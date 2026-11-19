@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Hub - Attendance</title>
+</head>
+<body>
+
+    <header>
+        <figure>
+            <img src="https://tse1.mm.bing.net/th/id/OIP.vtMw7rTMMvU3rB5YWnF30QHaHa?r=0&pid=ImgDet&w=208&h=208&c=7&dpr=1.5&o=7&rm=3" alt="Gym Hub Logo" width="80">
+        </figure>
+        <h1><b>&#127947; Gym Hub</b></h1>
+        <nav aria-label="Main navigation">
+            <a href="index.html"><b>&#127968; Home</b></a> |
+            <a href="gyms.html"><b>&#127963; Registered Gyms</b></a> |
+            <a href="members.html"><b>&#128101; Members</b></a> |
+            <a href="plans.html"><b>&#128179; Membership Plans</b></a> |
+            <a href="trainers.html"><b>&#127941; Trainers</b></a> |
+            <a href="payments.html"><b>&#128176; Payments</b></a> |
+            <a href="attendance.html"><b>&#128203; Attendance</b></a> |
+            <a href="schedule.html"><b>&#128197; Gym Schedule</b></a>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        <h2><b>&#128203; Attendance Records</b></h2>
+
+        <form>
+            <label for="date"><b>Filter by Date:</b></label>
+            <input type="date" id="date" name="date">
+            &nbsp;
+            <label for="gym"><b>Gym:</b></label>
+            <select id="gym" name="gym">
+                <option value="">-- All Gyms --</option>
+                <option value="powerfit">PowerFit Gym</option>
+                <option value="ironzone">Iron Zone</option>
+                <option value="fitlife">FitLife Center</option>
+                <option value="elitefit">EliteFit Sport Club</option>
+                <option value="zenith">Zenith Wellness</option>
+            </select>
+            &nbsp;
+            <button type="submit"><b>&#128270; Go</b></button>
+        </form>
+
+        <br>
+        <a href="#checkin"><b>+ Add Attendance Record</b></a>
+
+        <hr>
+
+        <section>
+            <h3><b>Attendance Log</b></h3>
+            <table border="1" cellpadding="8" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Log ID</th>
+                        <th>Date</th>
+                        <th>Member ID</th>
+                        <th>Member Name</th>
+                        <th>Gym</th>
+                        <th>Check-In</th>
+                        <th>Check-Out</th>
+                        <th>Duration</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="9" align="center"><i>No attendance records to display.</i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section id="checkin">
+            <h3><b>Add Attendance Record</b></h3>
+            <form>
+                <fieldset>
+                    <legend><b>Attendance Entry Form</b></legend>
+
+                    <label for="amember"><b>Member ID:</b></label><br>
+                    <input type="text" id="amember" name="amember" placeholder="e.g. M001" size="20" required><br><br>
+
+                    <label for="agym"><b>Gym:</b></label><br>
+                    <select id="agym" name="agym">
+                        <option value="">-- Select Gym --</option>
+                        <option value="powerfit">PowerFit Gym</option>
+                        <option value="ironzone">Iron Zone</option>
+                        <option value="fitlife">FitLife Center</option>
+                        <option value="elitefit">EliteFit Sport Club</option>
+                        <option value="zenith">Zenith Wellness</option>
+                    </select><br><br>
+
+                    <label for="adate"><b>Date:</b></label><br>
+                    <input type="date" id="adate" name="adate"><br><br>
+
+                    <label for="checkintime"><b>Check-In Time:</b></label><br>
+                    <input type="time" id="checkintime" name="checkintime"><br><br>
+
+                    <label for="checkouttime"><b>Check-Out Time:</b></label><br>
+                    <input type="time" id="checkouttime" name="checkouttime"><br><br>
+
+                    <label for="astatus"><b>Status:</b></label><br>
+                    <select id="astatus" name="astatus">
+                        <option value="">-- Select Status --</option>
+                        <option value="present">Present</option>
+                        <option value="absent">Absent</option>
+                        <option value="late">Late</option>
+                    </select><br><br>
+
+                    <button type="submit"><b>&#128203; Save Record</b></button>
+                    <button type="reset">Clear</button>
+                </fieldset>
+            </form>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2024 <b>Gym Hub</b>. All rights reserved.</p>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="gyms.html">Gyms</a> |
+            <a href="members.html">Members</a> |
+            <a href="plans.html">Plans</a> |
+            <a href="trainers.html">Trainers</a> |
+            <a href="payments.html">Payments</a> |
+            <a href="attendance.html">Attendance</a> |
+            <a href="schedule.html">Schedule</a>
+        </nav>
+    </footer>
+
+</body>
+</html>

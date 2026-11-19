@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Hub - Payments</title>
+</head>
+<body>
+
+    <header>
+        <figure>
+            <img src="https://tse1.mm.bing.net/th/id/OIP.vtMw7rTMMvU3rB5YWnF30QHaHa?r=0&pid=ImgDet&w=208&h=208&c=7&dpr=1.5&o=7&rm=3" alt="Gym Hub Logo" width="80">
+        </figure>
+        <h1><b>&#127947; Gym Hub</b></h1>
+        <nav aria-label="Main navigation">
+            <a href="index.html"><b>&#127968; Home</b></a> |
+            <a href="gyms.html"><b>&#127963; Registered Gyms</b></a> |
+            <a href="members.html"><b>&#128101; Members</b></a> |
+            <a href="plans.html"><b>&#128179; Membership Plans</b></a> |
+            <a href="trainers.html"><b>&#127941; Trainers</b></a> |
+            <a href="payments.html"><b>&#128176; Payments</b></a> |
+            <a href="attendance.html"><b>&#128203; Attendance</b></a> |
+            <a href="schedule.html"><b>&#128197; Gym Schedule</b></a>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        <h2><b>&#128176; Payments</b></h2>
+
+        <form>
+            <label for="filter"><b>Filter by Member / Plan:</b></label>
+            <input type="text" id="filter" name="filter" placeholder="Member name or plan..." size="30">
+            <button type="submit"><b>&#128270; Go</b></button>
+        </form>
+
+        <br>
+        <a href="#makepayment"><b>+ Record New Payment</b></a>
+
+        <hr>
+
+        <section>
+            <h3><b>Payment History</b></h3>
+            <table border="1" cellpadding="8" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Payment ID</th>
+                        <th>Member Name</th>
+                        <th>Member ID</th>
+                        <th>Plan</th>
+                        <th>Amount</th>
+                        <th>Payment Date</th>
+                        <th>Method</th>
+                        <th>Period</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="9" align="center"><i>No payment records to display.</i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section id="makepayment">
+            <h3><b>Record New Payment</b></h3>
+            <form>
+                <fieldset>
+                    <legend><b>Payment Form</b></legend>
+
+                    <label for="mid"><b>Member ID:</b></label><br>
+                    <input type="text" id="mid" name="mid" placeholder="e.g. M001" size="20" required><br><br>
+
+                    <label for="pplan"><b>Plan:</b></label><br>
+                    <select id="pplan" name="pplan">
+                        <option value="">-- Select Plan --</option>
+                        <option value="basic">Basic</option>
+                        <option value="standard">Standard</option>
+                        <option value="premium">Premium</option>
+                    </select><br><br>
+
+                    <label for="amount"><b>Amount ($):</b></label><br>
+                    <input type="number" id="amount" name="amount" placeholder="0.00" min="0" step="0.01" size="15"><br><br>
+
+                    <label for="pdate"><b>Payment Date:</b></label><br>
+                    <input type="date" id="pdate" name="pdate"><br><br>
+
+                    <label for="pmethod"><b>Payment Method:</b></label><br>
+                    <select id="pmethod" name="pmethod">
+                        <option value="">-- Select Method --</option>
+                        <option value="credit">Credit Card</option>
+                        <option value="debit">Debit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="cash">Cash</option>
+                    </select><br><br>
+
+                    <label for="pstatus"><b>Status:</b></label><br>
+                    <select id="pstatus" name="pstatus">
+                        <option value="">-- Select Status --</option>
+                        <option value="paid">Paid</option>
+                        <option value="pending">Pending</option>
+                        <option value="failed">Failed</option>
+                    </select><br><br>
+
+                    <button type="submit"><b>&#128176; Save Payment</b></button>
+                    <button type="reset">Clear</button>
+                </fieldset>
+            </form>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2024 <b>Gym Hub</b>. All rights reserved.</p>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="gyms.html">Gyms</a> |
+            <a href="members.html">Members</a> |
+            <a href="plans.html">Plans</a> |
+            <a href="trainers.html">Trainers</a> |
+            <a href="payments.html">Payments</a> |
+            <a href="attendance.html">Attendance</a> |
+            <a href="schedule.html">Schedule</a>
+        </nav>
+    </footer>
+
+</body>
+</html>
